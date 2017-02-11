@@ -55,7 +55,8 @@
     <div class="container">
     
       <h2>Example: Display Blog Feed</h2>
-      <hr />     
+      <hr />
+      
       <div class="row">
         <div class="col-xs-12 col-sm-6">
           <h3>amp-iframe: Blog Feed Random Order (default)</h3>
@@ -112,6 +113,7 @@
           <br>
         </div>
       </div>
+      
       <div class="row">      
         <div class="col-xs-12 col-sm-6">
           <h3>amp-iframe: Blog Feed Chronological Order</h3>
@@ -141,10 +143,10 @@
           <br>
         </div>
         <div class="col-xs-12 col-sm-6">
-          <h3>amp-iframe: Blog Related Feed Chronological Order</h3>
-          <p>Label: Learn</p>
+          <h3>amp-iframe: Post Content by URL</h3>
+          <p>Type: Text only</p>
           <br>
-          <amp-iframe src='https://cdn.rawgit.com/blogr-amp/ampaction-js/cfbd6a48/widget.html?ampactions=feed&amp;feedrandom=false&amp;feedlimit=999&amp;feedrelated=true&amp;feedrelatedlabel=Learn&amp;feedresults=5&amp;feedsummary=160&amp;feedimage=320&amp;fontsize=16&amp;fontlineheight=1.428&amp;fontweight=normal&amp;fontstyle=normal&amp;fontfamily=Helvetica,Arial,sans-serif&amp;fontlinkcolor=0066cc&amp;canonicalurl=http://blogr-amp.blogspot.com/&amp;url=http://blogr-amp.blogspot.com/&amp;homepageurl=http://blogr-amp.blogspot.com/&amp;canonicalhomepageurl=http://blogr-amp.blogspot.com/' 
+          <amp-iframe src='https://cdn.rawgit.com/blogr-amp/ampaction-js/cfbd6a48/widget.html?ampactions=feed&amp;feedcontenttype=HTML&amp;&amp;feedsummary=300&amp;fontsize=16&amp;fontlineheight=1.428&amp;fontweight=normal&amp;fontstyle=normal&amp;fontfamily=Helvetica,Arial,sans-serif&amp;fontlinkcolor=0066cc&amp;canonicalurl=http://blogr-amp.blogspot.com/2017/02/blogr-amp-for-contact-page-form.html&amp;url=http://blogr-amp.blogspot.com/&amp;homepageurl=http://blogr-amp.blogspot.com/&amp;canonicalhomepageurl=http://blogr-amp.blogspot.com/' 
             frameborder='0' 
             height='450' 
             layout='responsive' 
@@ -156,21 +158,37 @@
           <br>
           <pre>&lt;!-- required values --&gt;
 ?ampactions=feed
-&amp;amp;feedrelated=true
-&amp;amp;feedrandom=false
-&amp;amp;feedrelatedlabel={{BLOG_POST LABEL}}
+&amp;amp;feedcontenttype={{RESERVED_VALUES}}
 &amp;amp;canonicalurl={{BLOG_CANONICAL_URL}}
-&amp;amp;canonicalhomepageurl={{BLOG_CANONICAL_HOMEPAGE_URL}}
-
-&lt;!-- optional values --&gt;
-&amp;amp;feedlimit=999
-&amp;amp;feedresults=5
-&amp;amp;feedsummary=160
-&amp;amp;feedimage=320</pre>
+&amp;amp;canonicalhomepageurl={{BLOG_CANONICAL_HOMEPAGE_URL}}</pre>
           <br>
         </div>
       </div>
 
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <h3>amp-iframe: Post Content by URL</h3>
+          <p>Mode: HTML.</p>
+          <br>
+          <amp-iframe src='https://cdn.rawgit.com/blogr-amp/ampaction-js/cfbd6a48/widget.html?ampactions=feed&amp;feedcontenttype=HTML&amp;&amp;feedsummary=300&amp;fontsize=16&amp;fontlineheight=1.428&amp;fontweight=normal&amp;fontstyle=normal&amp;fontfamily=Helvetica,Arial,sans-serif&amp;fontlinkcolor=0066cc&amp;canonicalurl=http://blogr-amp.blogspot.com/2017/02/blogr-amp-for-apply-material-icons.html&amp;url=http://blogr-amp.blogspot.com/&amp;homepageurl=http://blogr-amp.blogspot.com/&amp;canonicalhomepageurl=http://blogr-amp.blogspot.com/' 
+            frameborder='0' 
+            height='450' 
+            layout='responsive' 
+            resizable='resizable' 
+            sandbox='allow-forms allow-scripts allow-same-origin allow-modals allow-popups' 
+            width='600'>
+            <div aria-label='Related' overflow='overflow' placeholder='placeholder' role='button' tabindex='0'></div>
+          </amp-iframe>
+          <br>
+          <pre>&lt;!-- required values --&gt;
+?ampactions=feed
+&amp;amp;feedcontenttype={{RESERVED_VALUES}}
+&amp;amp;canonicalurl={{BLOG_CANONICAL_URL}}
+&amp;amp;canonicalhomepageurl={{BLOG_CANONICAL_HOMEPAGE_URL}}</pre>
+          <br>
+        </div>
+      </div>
+  
       <h2>Example: DISQUS Comments</h2>
       <hr />      
       <div class="row">
