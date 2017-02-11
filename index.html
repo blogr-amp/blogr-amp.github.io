@@ -39,7 +39,7 @@
   <script async='async' custom-element='amp-analytics' src='https://cdn.ampproject.org/v0/amp-analytics-0.1.js'></script>
   <script async='async' custom-element='amp-iframe' src='https://cdn.ampproject.org/v0/amp-iframe-0.1.js'></script>
   <!-- <script async='async' custom-element='amp-carousel' src='https://cdn.ampproject.org/v0/amp-carousel-0.1.js'></script> -->
-  <!-- <script async='async' custom-element='amp-social-share' src='https://cdn.ampproject.org/v0/amp-social-share-0.1.js'></script> -->
+  <script async='async' custom-element='amp-social-share' src='https://cdn.ampproject.org/v0/amp-social-share-0.1.js'></script>
 
 </head>
 <body>
@@ -58,9 +58,9 @@
       <hr />     
       <div class="row">
         <div class="col-xs-12 col-sm-6">
-          <h3>amp-iframe: Displays Blog Feed (default)</h3>
+          <h3>amp-iframe: Blog Feed Random Order (default)</h3>
           <br>
-          <amp-iframe src='https://cdn.rawgit.com/blogr-amp/ampaction-js/cfbd6a48/widget.html?ampactions=feed&amp;feedlimit=999&amp;feedresults=5&amp;feedsummary=160&amp;feedimage=320&amp;fontsize=16&amp;fontlineheight=1.428&amp;fontweight=normal&amp;fontstyle=normal&amp;fontfamily=Helvetica,Arial,sans-serif&amp;fontlinkcolor=0066cc&amp;canonicalurl=http://blogr-amp.blogspot.com/&amp;url=http://blogr-amp.blogspot.com/&amp;homepageurl=http://blogr-amp.blogspot.com/&amp;canonicalhomepageurl=http://blogr-amp.blogspot.com/' 
+          <amp-iframe src='https://cdn.rawgit.com/blogr-amp/ampaction-js/cfbd6a48/widget.html?ampactions=feed&amp;feedlimit=999&amp;feedresults=3&amp;feedsummary=160&amp;feedimage=320&amp;fontsize=16&amp;fontlineheight=1.428&amp;fontweight=normal&amp;fontstyle=normal&amp;fontfamily=Helvetica,Arial,sans-serif&amp;fontlinkcolor=0066cc&amp;canonicalurl=http://blogr-amp.blogspot.com/&amp;url=http://blogr-amp.blogspot.com/&amp;homepageurl=http://blogr-amp.blogspot.com/&amp;canonicalhomepageurl=http://blogr-amp.blogspot.com/' 
             frameborder='0' 
             height='450' 
             layout='responsive' 
@@ -83,9 +83,9 @@
           <br>
         </div>
         <div class="col-xs-12 col-sm-6">
-          <h3>amp-iframe: Displays Blog Related Feed (by Label)</h3>
+          <h3>amp-iframe: Blog Related Feed Random Order (by Label)</h3>
           <br>
-          <amp-iframe src='https://cdn.rawgit.com/blogr-amp/ampaction-js/cfbd6a48/widget.html?ampactions=feed&amp;feedlimit=999&amp;feedrelated=true&amp;feedrelatedlabel=Learn&amp;feedresults=5&amp;feedsummary=160&amp;feedimage=320&amp;fontsize=16&amp;fontlineheight=1.428&amp;fontweight=normal&amp;fontstyle=normal&amp;fontfamily=Helvetica,Arial,sans-serif&amp;fontlinkcolor=0066cc&amp;canonicalurl=http://blogr-amp.blogspot.com/&amp;url=http://blogr-amp.blogspot.com/&amp;homepageurl=http://blogr-amp.blogspot.com/&amp;canonicalhomepageurl=http://blogr-amp.blogspot.com/' 
+          <amp-iframe src='https://cdn.rawgit.com/blogr-amp/ampaction-js/cfbd6a48/widget.html?ampactions=feed&amp;feedresults=3&amp;feedlimit=999&amp;feedrelated=true&amp;feedrelatedlabel=Getting Started&amp;feedsummary=160&amp;feedimage=320&amp;fontsize=16&amp;fontlineheight=1.428&amp;fontweight=normal&amp;fontstyle=normal&amp;fontfamily=Helvetica,Arial,sans-serif&amp;fontlinkcolor=0066cc&amp;canonicalurl=http://blogr-amp.blogspot.com/&amp;url=http://blogr-amp.blogspot.com/&amp;homepageurl=http://blogr-amp.blogspot.com/&amp;canonicalhomepageurl=http://blogr-amp.blogspot.com/' 
             frameborder='0' 
             height='450' 
             layout='responsive' 
@@ -98,6 +98,62 @@
           <pre>&lt;!-- required values --&gt;
 ?ampactions=feed
 &amp;amp;feedrelated=true
+&amp;amp;feedrelatedlabel={{BLOG_POST LABEL}}
+&amp;amp;canonicalurl={{BLOG_CANONICAL_URL}}
+&amp;amp;canonicalhomepageurl={{BLOG_CANONICAL_HOMEPAGE_URL}}
+
+&lt;!-- optional values --&gt;
+&amp;amp;feedlimit=999
+&amp;amp;feedresults=5
+&amp;amp;feedsummary=160
+&amp;amp;feedimage=320</pre>
+          <br>
+        </div>
+      </div>
+      <div class="row">      
+        <div class="col-xs-12 col-sm-6">
+          <h3>amp-iframe: Blog Feed Chronoligical Order</h3>
+          <br>
+          <amp-iframe src='https://cdn.rawgit.com/blogr-amp/ampaction-js/cfbd6a48/widget.html?ampactions=feed&amp;feedrandom=false&amp;feedlimit=999&amp;feedresults=5&amp;feedsummary=160&amp;feedimage=320&amp;fontsize=16&amp;fontlineheight=1.428&amp;fontweight=normal&amp;fontstyle=normal&amp;fontfamily=Helvetica,Arial,sans-serif&amp;fontlinkcolor=0066cc&amp;canonicalurl=http://blogr-amp.blogspot.com/&amp;url=http://blogr-amp.blogspot.com/&amp;homepageurl=http://blogr-amp.blogspot.com/&amp;canonicalhomepageurl=http://blogr-amp.blogspot.com/' 
+            frameborder='0' 
+            height='450' 
+            layout='responsive' 
+            resizable='resizable' 
+            sandbox='allow-forms allow-scripts allow-same-origin allow-modals allow-popups' 
+            width='600'>
+            <div aria-label='Related' overflow='overflow' placeholder='placeholder' role='button' tabindex='0'></div>
+          </amp-iframe>
+          <br>
+          <pre>&lt;!-- required values --&gt;
+?ampactions=feed
+&amp;amp;feedrandom=false
+&amp;amp;canonicalurl={{BLOG_CANONICAL_URL}}
+&amp;amp;canonicalhomepageurl={{BLOG_CANONICAL_HOMEPAGE_URL}}
+
+&lt;!-- optional values --&gt;
+&amp;amp;feedlimit=999
+&amp;amp;feedresults=5
+&amp;amp;feedsummary=160
+&amp;amp;feedimage=320</pre>
+          <br>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <h3>amp-iframe: Blog Related Feed Random Order (by Label)</h3>
+          <br>
+          <amp-iframe src='https://cdn.rawgit.com/blogr-amp/ampaction-js/cfbd6a48/widget.html?ampactions=feed&amp;feedrandom=false&amp;feedlimit=999&amp;feedrelated=true&amp;feedrelatedlabel=Learn&amp;feedresults=5&amp;feedsummary=160&amp;feedimage=320&amp;fontsize=16&amp;fontlineheight=1.428&amp;fontweight=normal&amp;fontstyle=normal&amp;fontfamily=Helvetica,Arial,sans-serif&amp;fontlinkcolor=0066cc&amp;canonicalurl=http://blogr-amp.blogspot.com/&amp;url=http://blogr-amp.blogspot.com/&amp;homepageurl=http://blogr-amp.blogspot.com/&amp;canonicalhomepageurl=http://blogr-amp.blogspot.com/' 
+            frameborder='0' 
+            height='450' 
+            layout='responsive' 
+            resizable='resizable' 
+            sandbox='allow-forms allow-scripts allow-same-origin allow-modals allow-popups' 
+            width='600'>
+            <div aria-label='Related' overflow='overflow' placeholder='placeholder' role='button' tabindex='0'></div>
+          </amp-iframe>
+          <br>
+          <pre>&lt;!-- required values --&gt;
+?ampactions=feed
+&amp;amp;feedrelated=true
+&amp;amp;feedrandom=false
 &amp;amp;feedrelatedlabel={{BLOG_POST LABEL}}
 &amp;amp;canonicalurl={{BLOG_CANONICAL_URL}}
 &amp;amp;canonicalhomepageurl={{BLOG_CANONICAL_HOMEPAGE_URL}}
@@ -140,6 +196,8 @@
   </article>
   
   <footer>
+    <br>
+    <br>
     <div class="container text-center">
       <amp-social-share type='twitter'/>
       <amp-social-share data-param-app_id='1490997184493796' type='facebook'/>
@@ -147,6 +205,8 @@
       <hr />      
       &copy;2017 Created for <a href="//blogr-amp.blogspot.com/" target="_blank">Blogr-AMP Blogger Theme with AMP</a>
     </div>
+    <br>
+    <br>
   </footer>
 <amp-analytics>
 <script type='application/json'>
