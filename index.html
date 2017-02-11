@@ -54,12 +54,11 @@
     <div class="container">
     
       <h2>Example: Display Blog Feed</h2>
-      <hr />
-      
+      <hr />     
       <div class="row">
         <div class="col-xs-12 col-sm-6">
-          <br>
           <h3>amp-iframe: Displays Blog Feed (default)</h3>
+          <br>
           <amp-iframe src='https://cdn.rawgit.com/blogr-amp/ampaction-js/cfbd6a48/widget.html?ampactions=feed&amp;feedlimit=999&amp;feedresults=5&amp;feedsummary=160&amp;feedimage=320&amp;fontsize=16&amp;fontlineheight=1.428&amp;fontweight=normal&amp;fontstyle=normal&amp;fontfamily=Helvetica,Arial,sans-serif&amp;fontlinkcolor=0066cc&amp;canonicalurl=http://blogr-amp.blogspot.com/&amp;url=http://blogr-amp.blogspot.com/&amp;homepageurl=http://blogr-amp.blogspot.com/&amp;canonicalhomepageurl=http://blogr-amp.blogspot.com/' 
             frameborder='0' 
             height='450' 
@@ -70,10 +69,23 @@
             <div aria-label='Related' overflow='overflow' placeholder='placeholder' role='button' tabindex='0'></div>
           </amp-iframe>
           <br>
+          <pre><code>
+            &gt;!-- required values --&lt;<br>
+            ?ampactions=feed<br>
+            &amp;amp;canonicalurl={{BLOG_CANONICAL_URL}}<br>
+            &amp;amp;canonicalhomepageurl={{BLOG_CANONICAL_HOMEPAGE_URL}} <br>
+            <br>
+            &gt;!-- optional values --&lt;<br>
+            &amp;amp;feedlimit=999<br>
+            &amp;amp;feedresults=5<br>
+            &amp;amp;feedsummary=160<br><br>
+            &amp;amp;feedimage=320<br>
+          </code></pre>
+          <br>
         </div>
         <div class="col-xs-12 col-sm-6">
+          <h3>amp-iframe: Displays Blog Related Feed (by Label)</h3>
           <br>
-          <h3>amp-iframe: Displays Blog Related Feed (default)</h3>
           <amp-iframe src='https://cdn.rawgit.com/blogr-amp/ampaction-js/cfbd6a48/widget.html?ampactions=feed&amp;feedlimit=999&amp;feedrelated=true&amp;feedrelatedlabel=Learn&amp;feedresults=5&amp;feedsummary=160&amp;feedimage=320&amp;fontsize=16&amp;fontlineheight=1.428&amp;fontweight=normal&amp;fontstyle=normal&amp;fontfamily=Helvetica,Arial,sans-serif&amp;fontlinkcolor=0066cc&amp;canonicalurl=http://blogr-amp.blogspot.com/&amp;url=http://blogr-amp.blogspot.com/&amp;homepageurl=http://blogr-amp.blogspot.com/&amp;canonicalhomepageurl=http://blogr-amp.blogspot.com/' 
             frameborder='0' 
             height='450' 
@@ -84,12 +96,26 @@
             <div aria-label='Related' overflow='overflow' placeholder='placeholder' role='button' tabindex='0'></div>
           </amp-iframe>
           <br>
+          <pre><code>
+            &gt;!-- required values --&lt;<br>
+            ?ampactions=feed<br>
+            &amp;amp;feedrelated=true<br>
+            &amp;amp;feedrelatedlabel={{BLOG_POST LABEL}} <br>
+            &amp;amp;canonicalurl={{BLOG_CANONICAL_URL}}<br>
+            &amp;amp;canonicalhomepageurl={{BLOG_CANONICAL_HOMEPAGE_URL}} <br>
+            <br>
+            &gt;!-- optional values --&lt;<br>
+            &amp;amp;feedlimit=999<br>
+            &amp;amp;feedresults=5<br>
+            &amp;amp;feedsummary=160<br><br>
+            &amp;amp;feedimage=320<br>
+          </code></pre>
+          <br>
         </div>
       </div>
-      <hr />
-      <h2>Example: DISQUS</h2>
-      <hr />
-      
+
+      <h2>Example: DISQUS Comments</h2>
+      <hr />      
       <div class="row">
         <div class="col-xs-12 col-sm-6">
           <amp-iframe src='https://cdn.rawgit.com/blogr-amp/ampaction-js/cfbd6a48/widget.html?ampactions=disqus&amp;shortname=disqus-blogrcart&amp;canonicalurl=https://blogr-amp.github.io/&amp;url=https://blogr-amp.github.io/&amp;homepageurl=https://blogr-amp.github.io/&amp;canonicalhomepageurl=https://blogr-amp.github.io/' 
@@ -100,7 +126,18 @@
             sandbox='allow-forms allow-scripts allow-same-origin allow-modals allow-popups' 
             width='600'>
             <div aria-label='Disqus' overflow='overflow' placeholder='placeholder' role='button' tabindex='0'></div>
-          </amp-iframe>      
+          </amp-iframe> 
+          <br>
+          <pre><code>
+            &gt;!-- required values --&lt;<br>
+            ?ampactions=disqus<br>
+            &amp;amp;shortname={{DISQUS_SHORTNAME}}<br>
+            &amp;amp;url={{BLOG_URL}}<br>
+            &amp;amp;homepageurl={{BLOG_HOMEPAGE_URL}} <br>
+            &amp;amp;canonicalurl={{BLOG_CANONICAL_URL}}<br>
+            &amp;amp;canonicalhomepageurl={{BLOG_CANONICAL_HOMEPAGE_URL}} <br>
+          </code></pre>
+          <br>        
         </div>
       </div>
       
