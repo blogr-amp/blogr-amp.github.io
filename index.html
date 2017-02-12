@@ -62,7 +62,7 @@
           <h2>Example: Display Blog Feed</h2>
           <br>
      
-          <h3>amp-iframe: Blog Feed Random Order (default)</h3>
+          <h3>amp-iframe: Random Order (default)</h3>
           <p>Nos Post Display: 3</p>
           <hr>
           <amp-iframe src='https://cdn.rawgit.com/blogr-amp/ampaction-js/cfbd6a48/widget.html?ampactions=feed&amp;feedlimit=999&amp;feedresults=3&amp;feedsummary=160&amp;feedimage=320&amp;fontsize=16&amp;fontlineheight=1.428&amp;fontweight=normal&amp;fontstyle=normal&amp;fontfamily=Helvetica,Arial,sans-serif&amp;fontlinkcolor=0066cc&amp;canonicalurl=http://blogr-amp.blogspot.com/&amp;url=http://blogr-amp.blogspot.com/&amp;homepageurl=http://blogr-amp.blogspot.com/&amp;canonicalhomepageurl=http://blogr-amp.blogspot.com/' 
@@ -78,16 +78,16 @@
           <pre>&lt;!-- required values --&gt;
 ?ampactions=feed
 &amp;amp;feedlimit=999
+&amp;amp;feedresults=5
 &amp;amp;canonicalurl={{BLOG_CANONICAL_URL}}
 &amp;amp;canonicalhomepageurl={{BLOG_CANONICAL_HOMEPAGE_URL}}
 
 &lt;!-- optional values --&gt;
-&amp;amp;feedresults=5
 &amp;amp;feedsummary=160
 &amp;amp;feedimage=320</pre>
           <br>
           
-          <h3>amp-iframe: Blog Related Feed Random Order (by Label)</h3>
+          <h3>amp-iframe: Related Posts Random Order (by Label)</h3>
           <p>Label: Getting Started</p>
           <hr>
           
@@ -105,17 +105,17 @@
 ?ampactions=feed
 &amp;amp;feedrelated=true
 &amp;amp;feedrelatedlabel={{BLOG_POST LABEL}}
+&amp;amp;feedresults=5
 &amp;amp;feedlimit=999
 &amp;amp;canonicalurl={{BLOG_CANONICAL_URL}}
 &amp;amp;canonicalhomepageurl={{BLOG_CANONICAL_HOMEPAGE_URL}}
 
 &lt;!-- optional values --&gt;
-&amp;amp;feedresults=5
 &amp;amp;feedsummary=160
 &amp;amp;feedimage=320</pre>
           <br>
           
-          <h3>amp-iframe: Blog Feed Chronological Order</h3>
+          <h3>amp-iframe: Chronological Order</h3>
           <p>Nos Post Display: 5</p>
           <hr>
           
@@ -132,17 +132,17 @@
           <pre>&lt;!-- required values --&gt;
 ?ampactions=feed
 &amp;amp;feedrandom=false
+&amp;amp;feedresults=5
 &amp;amp;feedlimit=999
 &amp;amp;canonicalurl={{BLOG_CANONICAL_URL}}
 &amp;amp;canonicalhomepageurl={{BLOG_CANONICAL_HOMEPAGE_URL}}
 
 &lt;!-- optional values --&gt;
-&amp;amp;feedresults=5
 &amp;amp;feedsummary=160
 &amp;amp;feedimage=320</pre>
           <br>
           
-          <h3>amp-iframe: Blog Related Feed Chronological Order</h3>
+          <h3>amp-iframe: Related Posts Chronological Order</h3>
           <p>Label: Learn</p>
           <hr>
           
@@ -159,23 +159,23 @@
           <pre>&lt;!-- required values --&gt;
 ?ampactions=feed
 &amp;amp;feedrandom=false
+&amp;amp;feedresults=5
 &amp;amp;feedlimit=999
 &amp;amp;canonicalurl={{BLOG_CANONICAL_URL}}
 &amp;amp;canonicalhomepageurl={{BLOG_CANONICAL_HOMEPAGE_URL}}
 
 &lt;!-- optional values --&gt;
-&amp;amp;feedresults=5
 &amp;amp;feedsummary=160
 &amp;amp;feedimage=320</pre>
           <br>
           
-          <h3>amp-iframe: Post Content by URL</h3>
+          <h3>amp-iframe: Post Content by Post URL</h3>
           <p>Type: Text only</p>
           <hr>
           
           <amp-iframe src='https://cdn.rawgit.com/blogr-amp/ampaction-js/cfbd6a48/widget.html?ampactions=feed&amp;feedresults=1&amp;feedlimit=999&amp;feedcontenttype=text&amp;feedsummary=300&amp;fontsize=16&amp;fontlineheight=1.428&amp;fontweight=normal&amp;fontstyle=normal&amp;fontfamily=Helvetica,Arial,sans-serif&amp;fontlinkcolor=0066cc&amp;canonicalurl=http://blogr-amp.blogspot.com/2017/02/blogr-amp-for-contact-page-form.html&amp;url=http://blogr-amp.blogspot.com/2017/02/blogr-amp-for-contact-page-form.html&amp;homepageurl=http://blogr-amp.blogspot.com/&amp;canonicalhomepageurl=http://blogr-amp.blogspot.com/' 
             frameborder='0' 
-            height='200' 
+            height='120' 
             layout='responsive' 
             resizable='resizable' 
             sandbox='allow-forms allow-scripts allow-same-origin allow-modals allow-popups' 
@@ -187,11 +187,12 @@
 ?ampactions=feed
 &amp;amp;feedcontenttype={{CONTENT_TYPE}}
 &amp;amp;feedlimit=999
+&amp;amp;feedresults=1
 &amp;amp;canonicalurl={{BLOG_CANONICAL_URL}}
 &amp;amp;canonicalhomepageurl={{BLOG_CANONICAL_HOMEPAGE_URL}}</pre>
           <br>
 
-          <h3>amp-iframe: Post Content by URL</h3>
+          <h3>amp-iframe: Post Content by Post URL</h3>
           <p>Mode: HTML.</p>
           <hr>
           
@@ -209,6 +210,7 @@
 ?ampactions=feed
 &amp;amp;feedcontenttype={{CONTENT_TYPE}}
 &amp;amp;feedlimit=999
+&amp;amp;feedresults=1
 &amp;amp;canonicalurl={{BLOG_CANONICAL_URL}}
 &amp;amp;canonicalhomepageurl={{BLOG_CANONICAL_HOMEPAGE_URL}}</pre>
           <br>
@@ -234,7 +236,72 @@
 &amp;amp;homepageurl={{BLOG_HOMEPAGE_URL}}
 &amp;amp;canonicalurl={{BLOG_CANONICAL_URL}}
 &amp;amp;canonicalhomepageurl={{BLOG_CANONICAL_HOMEPAGE_URL}}</pre>
-          <br>        
+          <br>
+          
+          <h2>Font Styles (Optional)</h2>
+          <br>
+          
+          <pre>&lt;!-- optional font styles setup values --&gt;
+&amp;amp;fontstyle=normal
+&amp;amp;fontweight=normal
+&amp;amp;fontsize=16
+&amp;amp;fontlineheight=1.428
+&amp;amp;fontfamily=Helvetica,Arial,sans-serif
+
+&lt;!-- font CSS output --&gt;
+&lt;style&gt; 
+  body { fontstyle fontweight fontsize(+px)/fontlineheight fontfamily }
+&lt;/style&gt;</pre>
+          <br>
+          
+          <h2>Date Formatting (Optional)</h2>
+          <br>
+          
+          <pre>&lt;!-- optional font styles setup values --&gt;
+&amp;amp;feeddate=ddmmyy
+&amp;amp;feedmonths=1[]2[]3[]4[]5[]6[]7[]8[]9[]10[]11[]12
+&amp;amp;fontsep=/[]/</pre>
+          <br>          
+
+          <table class="table">
+            <thead>                  
+              <th>Key</th><th>Accepted Values</th>
+            </thead>
+            <tbody>
+              <td>feeddate</td>
+              <td>
+                Date format display.<br>
+                Assigned format values:<br>
+                <code>mmddyy</code> - month day year (default)<br>
+                <code>ddmmyy</code> - day month year<br>
+                <code>yymmdd</code> - year month day<br>
+                <code>yyddmm</code> - year day month <br>
+                <br>
+                <code>mmddyy</code> (default)<br>
+              </td>
+              
+              <td>feedmonths</td>
+              <td>
+                Date separators.<br>
+                Converts string values to arrays.<br>
+                Use <code>[]</code> as separators between values.<br>
+                <br>
+                <code>Jan[]Feb[]Mac[]Apr[]May[]Jun[]Jul[]Aug[]Sep[]Oct[]Nov[]Dec[]</code> (default)<br>    
+              </td>  
+              
+              <td>feedsep</td>
+              <td>
+                String for date format separators<br>
+                Converts string values to arrays<br>
+                Use <code>[]</code> as string separator<br>
+                <br>
+                <code> [], </code> (default)<br>                
+              </td>                
+              
+            </tbody>           
+          </table>
+          <br>
+                    
         </div>
       </div>
       
