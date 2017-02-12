@@ -57,15 +57,16 @@
   <article>
     <div class="container">
       
-      <h2>Example: Display Blog Feed</h2>
+      <h2>Examples amp-iframe Display Blogger Feed</h2>
+      <p><a href="https://github.com/blogr-amp">Documentation</a></p>
       <br>
       
       <h3>amp-iframe: Random Order (default)</h3>
-      <p>Nos Post Display: 3</p>   
+      <p>Attempt to display a collection of Blogger posts in random order.</p>   
       <hr>
       <div class="row">
-        <div class="col-xs-12 col-sm-5">  
-        <pre>&lt;!-- required values --&gt;
+        <div class="col-xs-12 col-sm-5">
+          <pre>&lt;!-- required values --&gt;
 ?ampactions=feed
 &amp;amp;feedlimit=999
 &amp;amp;feedresults=5
@@ -92,15 +93,15 @@
       </div>
       
       <h3>amp-iframe: Related Posts Random Order (by Label)</h3>
-      <p>Label: Getting Started</p>     
+      <p>Attempt to display a collection of Blogger posts by related label in random order.</p>     
       <hr>
       
       <div class="row"> 
-        <div class="col-xs-12 col-sm-5"> 
+        <div class="col-xs-12 col-sm-5">
           <pre>&lt;!-- required values --&gt;
 ?ampactions=feed
 &amp;amp;feedrelated=true
-&amp;amp;feedrelatedlabel={{BLOG_POST LABEL}}
+&amp;amp;feedrelatedlabel={{BLOG_POST_LABEL}}
 &amp;amp;feedresults=5
 &amp;amp;feedlimit=999
 &amp;amp;canonicalurl={{BLOG_CANONICAL_URL}}
@@ -126,11 +127,11 @@
       </div>
 
       <h3>amp-iframe: Chronological Order</h3>
-      <p>Nos Post Display: 5</p>
+      <p>Attempt to display a collection of Blogger posts in chronological order.</p>
       <hr>
       
       <div class="row"> 
-        <div class="col-xs-12 col-sm-5"> 
+        <div class="col-xs-12 col-sm-5">
           <pre>&lt;!-- required values --&gt;
 ?ampactions=feed
 &amp;amp;feedrandom=false
@@ -159,14 +160,16 @@
       </div>
 
       <h3>amp-iframe: Related Posts Chronological Order</h3>
-      <p>Label: Learn</p>
+      <p>Attempt to display a collection of Blogger posts by label in chronological order.</p>
       <hr>
       
       <div class="row"> 
-        <div class="col-xs-12 col-sm-5">       
+        <div class="col-xs-12 col-sm-5">
           <pre>&lt;!-- required values --&gt;
 ?ampactions=feed
 &amp;amp;feedrandom=false
+&amp;amp;feedrelated=true
+&amp;amp;feedrelatedlabel={{BLOG_POST_LABEL}}
 &amp;amp;feedresults=5
 &amp;amp;feedlimit=999
 &amp;amp;canonicalurl={{BLOG_CANONICAL_URL}}
@@ -192,11 +195,11 @@
       </div>
 
       <h3>amp-iframe: Post Content by Post URL</h3>
-      <p>Type: Text only</p>
+      <p>Attempt to display post content strips all HTML tags (text only).</p>
       <hr>
       
       <div class="row"> 
-         <div class="col-xs-12 col-sm-5"> 
+         <div class="col-xs-12 col-sm-5">
            <pre>&lt;!-- required values --&gt;
 ?ampactions=feed
 &amp;amp;feedcontenttype={{CONTENT_TYPE}}
@@ -221,11 +224,11 @@
       </div>
 
       <h3>amp-iframe: Post Content by Post URL</h3>
-      <p>Mode: HTML.</p>
+      <p>Attempt to display post content as is from feed (text &amp; html).</p>
       <hr>
       
       <div class="row"> 
-        <div class="col-xs-12 col-sm-5"> 
+        <div class="col-xs-12 col-sm-5">
           <pre>&lt;!-- required values --&gt;
 ?ampactions=feed
 &amp;amp;feedcontenttype={{CONTENT_TYPE}}
@@ -250,10 +253,11 @@
       </div>
 
       <h2>Example: DISQUS Comments</h2>
+      <p>Display DISQUS comment box &amp; thread by <code>disqus_shortname</code>.</p>      
       <hr>
       
       <div class="row">
-        <div class="col-xs-12 col-sm-5"> 
+        <div class="col-xs-12 col-sm-5">
           <pre>&lt;!-- required values --&gt;
 ?ampactions=disqus
 &amp;amp;shortname={{DISQUS_SHORTNAME}}
