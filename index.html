@@ -316,18 +316,28 @@
       
       <div class="row"> 
         <div class="col-xs-12 col-sm-5"> 
-          <pre>&lt;!-- optional font styles setup values --&gt;
+          <pre>&lt;!-- optional font styles values --&gt;
 &amp;amp;fontstyle=normal
 &amp;amp;fontweight=normal
 &amp;amp;fontsize=16
 &amp;amp;fontlineheight=1.428
 &amp;amp;fontfamily=Helvetica,Arial,sans-serif</pre>
         <br>
+          <pre>&lt;!-- optional font color values --&gt;
+&amp;amp;fontcolor=333333
+&amp;amp;fontlinkcolor=0066cc</pre>
+          <br>
         </div>
         <div class="col-xs-12 col-sm-7"> 
 <pre>&lt;!-- font CSS output --&gt;
 &lt;style&gt; 
-  body { fontstyle fontweight fontsize(+px)/fontlineheight fontfamily }
+  body { [fontstyle] [fontweight] [fontsize]px/[fontlineheight] [fontfamily] }
+&lt;/style&gt;</pre>
+          <br>
+<pre>&lt;!-- font CSS output --&gt;
+&lt;style&gt; 
+  body { color: [fontcolor]; }
+  a { color: [fontcolor]; }
 &lt;/style&gt;</pre>
           <br>
         </div>
