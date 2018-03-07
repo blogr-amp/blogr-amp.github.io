@@ -365,6 +365,77 @@
         </div>
       </div>
       
+      <hr>
+      <h2>Example: Instagram Feed </h2>
+      <p>Display Instagram posts, follower & following count powered by Instafeed(js).</p>      
+      <hr>
+      
+      <div class="row"> 
+        <div class="col-xs-12 col-sm-5"> 
+          <pre>&lt;!-- required values --&gt;
+?ampactions=instagram
+&amp;amp;clientid={{ user instagram client id }}
+&amp;amp;accesstoken={{ user instagram access token }}
+&amp;amp;get=user
+&amp;amp;userid={{ user instagram id }}
+&amp;amp;sortby=random
+&amp;amp;limit=9
+&amp;amp;resolution=low_resolution
+&amp;amp;comments=true
+&amp;amp;likes=true
+&amp;amp;headercolor=%23333333
+&amp;amp;headerbg=%23ffffff
+&amp;amp;feedbg=%23000000
+&amp;amp;feedbgopacity=.45
+&amp;amp;feedbgcolor=%23000000
+&amp;amp;feedcolor=%23ffffff
+&amp;amp;posts=Poss
+&amp;amp;follower=Followers
+&amp;amp;following=Following
+&amp;amp;breakpoint=428
+&amp;amp;columns=3
+&amp;amp;columnsmobile=2</pre>
+          <br>          
+        </div>
+        <div class="col-xs-12 col-sm-7">
+          <!-- for development use URL endpoint https://rawgit.com/blogr-amp/ampaction-js/master/widget.html -->  
+          <amp-iframe
+           class="instafeed"
+           frameborder="0"
+           width="600"
+           height="250"
+           layout="responsive"
+           resizable="resizable"
+           sandbox="allow-forms allow-scripts allow-same-origin allow-modals allow-popups"
+           src="https://cdn.rawgit.com/blogr-amp/ampaction-js/03299617/widget.html?ampactions=instagram
+                &amp;get=user
+                &amp;userid=214246886
+                &amp;clientid=dd406b0991a94edb98ed8a795676532e
+                &amp;accesstoken=214246886.dd406b0.ef3d700605c04ad58b11b31d2e412563
+                &amp;sortby=random
+                &amp;limit=9
+                &amp;resolution=low_resolution
+                &amp;comments=true
+                &amp;likes=true
+                &amp;headercolor=%23333333
+                &amp;headerbg=%23ffffff
+                &amp;feedbg=%23000000
+                &amp;feedbgopacity=.45
+                &amp;feedbgcolor=%23000000
+                &amp;feedcolor=%23ffffff
+                &amp;posts=Posts
+                &amp;follower=Followers
+                &amp;following=Following
+                &amp;breakpoint=428
+                &amp;columns=3
+                &amp;columnsmobile=2">
+            <div overflow="overflow" tabindex="0" role="button" aria-label="Instafeed">
+               More from Instagram...
+            </div>
+          </amp-iframe>     
+        </div>
+      </div>
+      
     </div> <!-- container -->
   </article>
   
@@ -376,7 +447,7 @@
     <div class="container text-center">
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-          &copy;2017 <a href="//blog.irsah.com">irsah</a> | created for <a href="//blogr-amp.blogspot.com/" target="_blank">Blogr-AMP Blogger Blogspot Theme + AMP</a>
+          &copy;2017 <a href="https://blog.irsah.com">irsah</a> | created for <a href="https://blogr-amp.blogspot.com/" target="_blank">Blogr-AMP Blogger Blogspot Theme + AMP</a>
         </div>
       </div>
     </div>
